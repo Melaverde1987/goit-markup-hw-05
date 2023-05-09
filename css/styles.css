@@ -471,9 +471,8 @@ Customers Section
   justify-content: center;
   align-items: center;
   color: var(--light-slate);
-  transition-property: color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers .customers-icon .customers-link:hover,
@@ -676,14 +675,15 @@ Footer Section
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 300ms ease-in, visibility 250ms ease-in;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 500ms;
 }
 
 .backdrop.is-hidden .modal {
   opacity: 0;
-  transform: translate(-50%, -70%);
-  transition: opacity 300ms ease-in, transform 250ms ease-in;
+  transform: translate(-50%, -70%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 100ms;
 }
 
