@@ -208,11 +208,11 @@ Header
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .header .nav-list .nav-link.active {
   color: var(--ocean);
-  position: relative;
 }
 
 .header .nav-list .nav-link.active::after {
